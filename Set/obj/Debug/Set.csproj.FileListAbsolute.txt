@@ -1,0 +1,7 @@
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\bin\Debug\Set.exe.config
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\bin\Debug\Set.exe
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\bin\Debug\Set.pdb
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\obj\Debug\Set.csproj.AssemblyReference.cache
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\obj\Debug\Set.csproj.CoreCompileInputs.cache
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\obj\Debug\Set.exe
+D:\програмирование\программы\Изучение C#\Data_Structures\Set\obj\Debug\Set.pdb
