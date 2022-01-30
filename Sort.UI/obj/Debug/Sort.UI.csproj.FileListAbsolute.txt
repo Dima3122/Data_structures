@@ -1,0 +1,13 @@
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\bin\Debug\Sort.UI.exe.config
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\bin\Debug\Sort.UI.exe
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\bin\Debug\Sort.UI.pdb
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\bin\Debug\Sort.Bl.dll
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\bin\Debug\Sort.Bl.pdb
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.csproj.AssemblyReference.cache
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.Properties.Resources.resources
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.csproj.GenerateResource.cache
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.csproj.CoreCompileInputs.cache
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.csproj.CopyComplete
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.exe
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.pdb
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.UI\obj\Debug\Sort.UI.Form1.resources
