@@ -3,3 +3,4 @@ D:\програмирование\программы\Изучение C#\Data-st
 D:\програмирование\программы\Изучение C#\Data-structures\Sort.Bl\obj\Debug\Sort.Bl.csproj.CoreCompileInputs.cache
 D:\програмирование\программы\Изучение C#\Data-structures\Sort.Bl\obj\Debug\Sort.Bl.dll
 D:\програмирование\программы\Изучение C#\Data-structures\Sort.Bl\obj\Debug\Sort.Bl.pdb
+D:\програмирование\программы\Изучение C#\Data-structures\Sort.Bl\obj\Debug\Sort.Bl.csproj.AssemblyReference.cache

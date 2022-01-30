@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="BubleSortTests.cs" />
+    <Compile Include="CocktailSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

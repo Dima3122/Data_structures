@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sort.Bl
 {
     public class BubleSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public override void Sort()
+        protected override void MakeSort()
         {
+            SwopCount = 0;
             var count = Items.Count;
             for (int j = 0; j < count; j++)
             {
@@ -20,6 +17,7 @@ namespace Sort.Bl
                     if (a.CompareTo(b) == 1)
                     {
                         Swop(i, i+1);
+                        СompareCount++;
                     }
                 }
             }

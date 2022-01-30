@@ -13,26 +13,41 @@ namespace Sort.UI
 {
     public partial class Form1 : Form
     {
-        AlgorithmBase<int> algoritm = new BubleSort<int>();
+        List<int> Items = new List<int>();
         public Form1()
         {
             InitializeComponent();
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void Add_button_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox1.Text, out int value))
+            if (int.TryParse(Add_textBox.Text, out int value))
             {
-                algoritm.Items.Add(value);
-                label1.Text += " " + value;
+                Items.Add(value);
             }
+            Add_textBox.Text = "";
         }
 
-        private void Sorting_buble_Click(object sender, EventArgs e)
+        private void feel_button_Click(object sender, EventArgs e)
         {
-            algoritm.Sort();
-            foreach (var item in algoritm.Items)
+            if (int.TryParse(feel_textBox.Text, out int value))
             {
-                label2.Text += " " + item;
+                var rnd = new Random();
+                for (int i = 0; i < value; i++)
+                {
+                    Items.Add(rnd.Next(0,100));
+                }
+            }
+            feel_textBox.Text = "";
+        }
+        private void Start_BubleSort_button_Click(object sender, EventArgs e)
+        {
+            var bubleSort = new BubleSort<int>();
+            bubleSort.Items.AddRange(Items);
+            var time = bubleSort.Sort();
+            foreach (var item in bubleSort.Items)
+            {
+                label3.Text += " " + item;
             }
         }
     }
