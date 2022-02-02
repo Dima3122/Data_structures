@@ -36,10 +36,47 @@ namespace Sort.UI
         }
         private void Start_BubleSort_button_Click(object sender, EventArgs e)
         {
+            label3.Text = "";
             var bubleSort = new BubleSort<int>();
             bubleSort.Items.AddRange(Items);
             var time = bubleSort.Sort();
             foreach (var item in bubleSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
+
+        private void CoctailSort_button_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var cocktailSort = new CocktailSort<int>();
+            cocktailSort.Items.AddRange(Items);
+            var time = cocktailSort.Sort();
+            foreach (var item in cocktailSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
+
+        private void InsertionSort_button_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var insertionSort = new InsertionSort<int>();
+            insertionSort.Items.AddRange(Items);
+            var time = insertionSort.Sort();
+            foreach (var item in insertionSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
+
+        private void ShellSort_button_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var insertionSort = new InsertionSort<int>();
+            insertionSort.Items.AddRange(Items);
+            var time = insertionSort.Sort();
+            foreach (var item in insertionSort.Items)
             {
                 label3.Text += " " + item;
             }

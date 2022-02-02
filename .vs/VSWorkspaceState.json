@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Sort.Bl",
     "\\Sort.UI"
   ],
-  "SelectedNode": "\\Sort.UI\\Form1.cs",
+  "SelectedNode": "\\Sort.Bl\\InsertionSort.cs",
   "PreviewInSolutionExplorer": false
 }
