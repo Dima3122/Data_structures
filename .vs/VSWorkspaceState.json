@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Sort.Bl",
+    "\\Sort.BlTests",
     "\\Sort.UI"
   ],
-  "SelectedNode": "\\Sort.Bl\\InsertionSort.cs",
+  "SelectedNode": "\\Sort.BlTests\\InsertSortTests.cs",
   "PreviewInSolutionExplorer": false
 }
