@@ -81,5 +81,41 @@ namespace Sort.UI
                 label3.Text += " " + item;
             }
         }
+
+        private void quickSort_button_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var QuickSort = new QuickSort<int>();
+            QuickSort.Items.AddRange(Items);
+            var time = QuickSort.Sort();
+            foreach (var item in QuickSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
+
+        private void MergeSort_button_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var MergeSort = new MergeSort<int>();
+            MergeSort.Items.AddRange(Items);
+            MergeSort.Sort();
+            foreach (var item in MergeSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label3.Text = "";
+            var SelectionSort = new SelectionSort<int>();
+            SelectionSort.Items.AddRange(Items);
+            SelectionSort.Sort();
+            foreach (var item in SelectionSort.Items)
+            {
+                label3.Text += " " + item;
+            }
+        }
     }
 }

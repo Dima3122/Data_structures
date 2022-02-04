@@ -43,6 +43,9 @@ namespace Sort.UI
             this.CoctailSort_button = new System.Windows.Forms.Button();
             this.InsertionSort_button = new System.Windows.Forms.Button();
             this.ShellSort_button = new System.Windows.Forms.Button();
+            this.MergeSort_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.quickSort_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -140,7 +143,7 @@ namespace Sort.UI
             // 
             this.Start_BubleSort_button.Location = new System.Drawing.Point(381, 53);
             this.Start_BubleSort_button.Name = "Start_BubleSort_button";
-            this.Start_BubleSort_button.Size = new System.Drawing.Size(113, 23);
+            this.Start_BubleSort_button.Size = new System.Drawing.Size(137, 23);
             this.Start_BubleSort_button.TabIndex = 3;
             this.Start_BubleSort_button.Text = "Buble Sort";
             this.Start_BubleSort_button.UseVisualStyleBackColor = true;
@@ -148,9 +151,9 @@ namespace Sort.UI
             // 
             // CoctailSort_button
             // 
-            this.CoctailSort_button.Location = new System.Drawing.Point(501, 52);
+            this.CoctailSort_button.Location = new System.Drawing.Point(524, 53);
             this.CoctailSort_button.Name = "CoctailSort_button";
-            this.CoctailSort_button.Size = new System.Drawing.Size(94, 24);
+            this.CoctailSort_button.Size = new System.Drawing.Size(146, 24);
             this.CoctailSort_button.TabIndex = 4;
             this.CoctailSort_button.Text = "CoctailSort";
             this.CoctailSort_button.UseVisualStyleBackColor = true;
@@ -158,9 +161,9 @@ namespace Sort.UI
             // 
             // InsertionSort_button
             // 
-            this.InsertionSort_button.Location = new System.Drawing.Point(602, 52);
+            this.InsertionSort_button.Location = new System.Drawing.Point(676, 51);
             this.InsertionSort_button.Name = "InsertionSort_button";
-            this.InsertionSort_button.Size = new System.Drawing.Size(118, 24);
+            this.InsertionSort_button.Size = new System.Drawing.Size(116, 28);
             this.InsertionSort_button.TabIndex = 5;
             this.InsertionSort_button.Text = "InsertionSort";
             this.InsertionSort_button.UseVisualStyleBackColor = true;
@@ -168,19 +171,52 @@ namespace Sort.UI
             // 
             // ShellSort_button
             // 
-            this.ShellSort_button.Location = new System.Drawing.Point(727, 52);
+            this.ShellSort_button.Location = new System.Drawing.Point(798, 51);
             this.ShellSort_button.Name = "ShellSort_button";
-            this.ShellSort_button.Size = new System.Drawing.Size(126, 24);
+            this.ShellSort_button.Size = new System.Drawing.Size(96, 27);
             this.ShellSort_button.TabIndex = 6;
             this.ShellSort_button.Text = "ShellSort";
             this.ShellSort_button.UseVisualStyleBackColor = true;
             this.ShellSort_button.Click += new System.EventHandler(this.ShellSort_button_Click);
+            // 
+            // MergeSort_button
+            // 
+            this.MergeSort_button.Location = new System.Drawing.Point(716, 82);
+            this.MergeSort_button.Name = "MergeSort_button";
+            this.MergeSort_button.Size = new System.Drawing.Size(311, 25);
+            this.MergeSort_button.TabIndex = 7;
+            this.MergeSort_button.Text = "MergeSort";
+            this.MergeSort_button.UseVisualStyleBackColor = true;
+            this.MergeSort_button.Click += new System.EventHandler(this.MergeSort_button_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(900, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 26);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "SelectionSort";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // quickSort_button
+            // 
+            this.quickSort_button.Location = new System.Drawing.Point(381, 84);
+            this.quickSort_button.Name = "quickSort_button";
+            this.quickSort_button.Size = new System.Drawing.Size(329, 23);
+            this.quickSort_button.TabIndex = 9;
+            this.quickSort_button.Text = "QUICKSORT";
+            this.quickSort_button.UseVisualStyleBackColor = true;
+            this.quickSort_button.Click += new System.EventHandler(this.quickSort_button_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 157);
+            this.Controls.Add(this.quickSort_button);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MergeSort_button);
             this.Controls.Add(this.ShellSort_button);
             this.Controls.Add(this.InsertionSort_button);
             this.Controls.Add(this.CoctailSort_button);
@@ -216,6 +252,9 @@ namespace Sort.UI
         private System.Windows.Forms.Button CoctailSort_button;
         private System.Windows.Forms.Button InsertionSort_button;
         private System.Windows.Forms.Button ShellSort_button;
+        private System.Windows.Forms.Button MergeSort_button;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button quickSort_button;
     }
 }
 

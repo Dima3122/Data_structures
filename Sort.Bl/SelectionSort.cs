@@ -14,11 +14,13 @@ namespace Sort.Bl
                 {
                     if (Items[j].CompareTo(Items[minIndex]) == -1)
                     {
+                        СompareCount++;
                         minIndex = j;
                     }
                 }
                 if (i != minIndex)
                 {
+                    SwopCount++;
                     Swop(i, minIndex);
                 }
             }

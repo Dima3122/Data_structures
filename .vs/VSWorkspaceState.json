@@ -5,6 +5,6 @@
     "\\Sort.BlTests",
     "\\Sort.UI"
   ],
-  "SelectedNode": "\\Sort.BlTests\\InsertSortTests.cs",
+  "SelectedNode": "\\Sort.Bl\\ShellSort.cs",
   "PreviewInSolutionExplorer": false
 }

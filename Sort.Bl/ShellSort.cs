@@ -18,6 +18,8 @@ namespace Sort.Bl
                     int j = i;
                     while ((j >= step) && Items[j - step].CompareTo(Items[j]) == 1)
                     {
+                        SwopCount++;
+                        СompareCount++;
                         Swop(j - step, j);
                         j -= step;
                     }
