@@ -1,6 +1,8 @@
 ﻿using Sort.Bl;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sort.UI
@@ -29,7 +31,7 @@ namespace Sort.UI
                 var rnd = new Random();
                 for (int i = 0; i < value; i++)
                 {
-                    Items.Add(rnd.Next(0,100));
+                    Items.Add(rnd.Next(0, 100));
                 }
             }
             feel_textBox.Text = "";
@@ -39,59 +41,58 @@ namespace Sort.UI
             label3.Text = "";
             var bubleSort = new BubleSort<int>();
             bubleSort.Items.AddRange(Items);
-            var time = bubleSort.Sort();
-            foreach (var item in bubleSort.Items)
+            bubleSort.Sort();
+            bubleSort.AlgorithmComplited += AlgorithmComplited;
+        }
+
+        private void AlgorithmComplited(object sender, EventArgs e)
+        {
+            var res = sender as AlgorithmBase<int>;
+            print_result(res);
+        }
+
+        private void print_result(AlgorithmBase<int> res)
+        {
+            foreach (var item in res.Items.Take(52).ToArray())
             {
                 label3.Text += " " + item;
             }
+            label4.Text = "Время: " + res.timer.Elapsed.TotalMilliseconds + "MC.";
+            label5.Text = "Количество обменов:" + res.SwopCount;
+            label6.Text = "Количество сравнений:" + res.СompareCount;
         }
-
+        
         private void CoctailSort_button_Click(object sender, EventArgs e)
         {
             label3.Text = "";
             var cocktailSort = new CocktailSort<int>();
             cocktailSort.Items.AddRange(Items);
-            var time = cocktailSort.Sort();
-            foreach (var item in cocktailSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            cocktailSort.Sort();
+            cocktailSort.AlgorithmComplited += AlgorithmComplited;
         }
-
         private void InsertionSort_button_Click(object sender, EventArgs e)
         {
             label3.Text = "";
             var insertionSort = new InsertionSort<int>();
             insertionSort.Items.AddRange(Items);
-            var time = insertionSort.Sort();
-            foreach (var item in insertionSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            insertionSort.Sort();
+            insertionSort.AlgorithmComplited += AlgorithmComplited;
         }
-
         private void ShellSort_button_Click(object sender, EventArgs e)
         {
             label3.Text = "";
-            var insertionSort = new InsertionSort<int>();
-            insertionSort.Items.AddRange(Items);
-            var time = insertionSort.Sort();
-            foreach (var item in insertionSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            var ShellSort = new ShellSort<int>();
+            ShellSort.Items.AddRange(Items);
+            ShellSort.Sort();
+            ShellSort.AlgorithmComplited += AlgorithmComplited;
         }
-
         private void quickSort_button_Click(object sender, EventArgs e)
         {
             label3.Text = "";
             var QuickSort = new QuickSort<int>();
             QuickSort.Items.AddRange(Items);
-            var time = QuickSort.Sort();
-            foreach (var item in QuickSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            QuickSort.Sort();
+            QuickSort.AlgorithmComplited += AlgorithmComplited;
         }
 
         private void MergeSort_button_Click(object sender, EventArgs e)
@@ -100,22 +101,15 @@ namespace Sort.UI
             var MergeSort = new MergeSort<int>();
             MergeSort.Items.AddRange(Items);
             MergeSort.Sort();
-            foreach (var item in MergeSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            MergeSort.AlgorithmComplited += AlgorithmComplited;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             label3.Text = "";
             var SelectionSort = new SelectionSort<int>();
             SelectionSort.Items.AddRange(Items);
             SelectionSort.Sort();
-            foreach (var item in SelectionSort.Items)
-            {
-                label3.Text += " " + item;
-            }
+            SelectionSort.AlgorithmComplited += AlgorithmComplited;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Sort.Bl
                     СompareCount++;
                 }
                 Items[j] = temp;
-            }     
+            }
         }
     }
 }

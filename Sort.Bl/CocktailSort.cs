@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Sort.Bl
 {
@@ -9,7 +11,7 @@ namespace Sort.Bl
             SwopCount = 0;
             int left = 0;
             int right = Items.Count - 1;
-            while(left < right)
+            while (left < right)
             {
                 var sc = SwopCount;
                 for (int i = left; i < right; i++)
@@ -29,7 +31,7 @@ namespace Sort.Bl
                 {
                     if (Items[i].CompareTo(Items[i - 1]) == -1)
                     {
-                        Swop(i, i-1);
+                        Swop(i, i - 1);
                         СompareCount++;
                     }
                 }

@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Sort.Bl
 {
     public class QuickSort<T> : AlgorithmBase<T> where T: IComparable
-    {
-        protected override void MakeSort()
+    {        
+        protected  override void MakeSort()
         {
-            QSort(0, Items.Count-1); 
+            QSort(0, Items.Count - 1);
         }
         private void QSort(int left, int right)
         {
@@ -24,6 +26,7 @@ namespace Sort.Bl
             //Опорный элемент находится под Right
             for (int i = left; i < right; i++)
             {
+                СompareCount++;
                 if (Items[i].CompareTo(Items[right]) == -1)
                 {
                     Swop(pointer, i);

@@ -10,44 +10,46 @@ namespace Sort.Bl
     {
         protected override void MakeSort()
         {
+            int length = GetMaxLength(Items);
+            SortCollection(Items, length - 1);
+        }
+
+        private List<T> SortCollection(List<T> collection, int step)
+        {
+            var result = new List<T>();
             var groups = new List<List<T>>();
             for (int i = 0; i < 10; i++)
             {
                 groups.Add(new List<T>());
             }
 
-            int length = GetMaxLength();
-
-            for (int step = 0; step < length; step++)
+            // Распределение элементов по корзинам. 
+            foreach (var item in collection)
             {
-                // Распределение элементов по корзинам. 
-                foreach (var item in Items)
+                var i = item.GetHashCode();
+                var value = i % (int)Math.Pow(10, step + 1) / (int)Math.Pow(10, step);
+                groups[value].Add(item);
+            }
+
+            // Сборка элементов.
+            foreach (var group in groups)
+            {
+                if (group.Count > 1 && step > 0)
                 {
-                    var i = item.GetHashCode();
-                    var value = i % (int)Math.Pow(10, step + 1) / (int)Math.Pow(10, step);
-                    groups[value].Add(item);
-                }
-                // Сборка элементов.
-                foreach (var group in groups)
-                {
-                    foreach (var item in group)
-                    {
-                        Items.Add(item);
-                    }
+                    result.AddRange(SortCollection(group, step - 1));
+                    continue;
                 }
 
-                // Очистка корзин.
-                foreach (var group in groups)
-                {
-                    group.Clear();
-                }
+                result.AddRange(group);
             }
+
+            return result;
         }
 
-        private int GetMaxLength()
+        private int GetMaxLength(List<T> collection)
         {
             int length = 0;
-            foreach (var item in Items)
+            foreach (var item in collection)
             {
                 if (item.GetHashCode() < 0)
                 {

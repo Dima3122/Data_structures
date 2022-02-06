@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Sort.Bl
 {
@@ -14,10 +16,10 @@ namespace Sort.Bl
                 {
                     var a = Items[i];
                     var b = Items[i + 1];
+                    СompareCount++;
                     if (a.CompareTo(b) == 1)
                     {
-                        Swop(i, i+1);
-                        СompareCount++;
+                        Swop(i, i + 1);
                     }
                 }
             }

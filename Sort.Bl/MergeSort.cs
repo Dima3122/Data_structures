@@ -14,44 +14,47 @@ namespace Sort.Bl
             {
                 return items;
             }
-            var mid = Items.Count / 2;
+            var mid = items.Count / 2;
             var left = items.Take(mid).ToList();
             var right = items.Skip(mid).ToList();
-            
             return Merge(Sort(left), Sort(right));
         }
+
         private List<T> Merge(List<T> left, List<T> right)
         {
-            var lenght = left.Count + right.Count;
-            var leftPtr = 0;
-            var rightPtr = 0;
-            var result = new List<T>();
-            for (int i = 0; i < lenght; i++)
+            var length = left.Count + right.Count;
+            var leftPointer = 0;
+            var rightPointer = 0;
+
+            var result = new List<T>(length);
+
+            for (int i = 0; i < length; i++)
             {
-                if (leftPtr < left.Count && rightPtr < right.Count)
+                СompareCount++;
+                if (leftPointer < left.Count && rightPointer < right.Count)
                 {
-                    if (left[leftPtr].CompareTo(right[rightPtr]) == 1)
+                    if (left[leftPointer].CompareTo(right[rightPointer]) == -1)
                     {
-                        result.Add(left[leftPtr]);
-                        leftPtr++;
+                        result.Add(left[leftPointer]);
+                        leftPointer++;
                     }
                     else
                     {
-                        result.Add(right[rightPtr]);
-                        rightPtr++;
+                        result.Add(right[rightPointer]);
+                        rightPointer++;
                     }
                 }
                 else
                 {
-                    if (rightPtr < right.Count)
+                    if (rightPointer < right.Count)
                     {
-                        result.Add(right[rightPtr]);
-                        rightPtr++;
+                        result.Add(right[rightPointer]);
+                        rightPointer++;
                     }
                     else
                     {
-                        result.Add(left[leftPtr]);
-                        leftPtr++;
+                        result.Add(left[leftPointer]);
+                        leftPointer++;
                     }
                 }
             }
